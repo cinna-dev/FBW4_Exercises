@@ -1,0 +1,1 @@
+:root is a pseudo-class that selects the element that represents the root of the document. in html5 it is identical to the html element but :root has a higher specificity . So it will overwrite html styles.

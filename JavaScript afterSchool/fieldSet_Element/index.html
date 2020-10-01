@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>fieldset Element</title>
+</head>
+
+<body>
+    <form id='form' action="" onsubmit="submitHandler"><button type="submit">Submit</button></form>
+    <fieldset form="form">
+        <legend>first fieldset</legend>
+        <input type="radio" id="kraken" name="monster">
+        <input type="radio" id="sasquatch" name="monster">
+    </fieldset>
+    <div>Lot of Content</div>
+    <fieldset form="form">
+        <legend>first fieldset</legend>
+        <input type="radio" id="kraken" name="monster">
+        <input type="radio" id="sasquatch" name="monster">
+    </fieldset>
+
+    <script>
+        const submitHandler = e => () => {
+            console.log(e.target)
+        }
+    </script>
+</body>
+
+</html>

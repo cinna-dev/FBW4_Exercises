@@ -1,0 +1,25 @@
+#div{
+    width:350px  ; 
+    min-height: 200px; 
+    border: 3px solid black;
+    white-space: pre-wrap;      /* CSS3 */   
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: 1px;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    resize: auto;
+    overflow-wrap: break-word;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px;
+}
+textarea{
+    outline: none;
+    border: 3px solid blue;
+    resize: none;
+}

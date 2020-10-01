@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="t">
+        <div>lions,
+            tigers</div>
+        <div style="visibility:hidden">and bears</div>
+    </div>
+
+    <script>
+        const t = document.querySelector('#t')
+        console.log(t.innerText)
+        //"lions, tigers" // ignores hidden
+        console.log(t.textContent)
+        //"lions,
+        //    tigers
+        //and bears" 
+
+
+        //textContent returns concatenated text of all text nodes. Which is almost like taking markup (i.e. innerHTML) and stripping it off of the tags. Notice that no whitespace normalization is performed, the text and whitespace are essentially spit out the same way they're defined in the markup. If you have a giant chunk of newlines in HTML source, you'll have them as part of textContent as well.
+
+        // innerText : The most common usage for these properties is while working on a rich text editor, when you need to “get the plain text” or for other functional reasons. [...] Because “no whitespace normalization is performed”, what textContent is essentially doing is acting like a PRE element. The markup is stripped, but otherwise what we get is exactly what was in the HTML document — including tabs, spaces, lack of spaces, and line breaks. It’s getting the source code from the HTML! What good this is, I really don’t know.
+
+        //Let's say we have a contenteditable area in which a user is writing something. And we'd like to have our own spelling correction of a text in that area. In order to do that, we really want to analyze text the way it appears in the browser, not in the markup. We'd like to know if there are newlines or spaces typed by a user, and not those that are in the markup, so that we can correct text accordingly.
+
+        //300x faster then innerText
+    </script>
+</body>
+
+</html>

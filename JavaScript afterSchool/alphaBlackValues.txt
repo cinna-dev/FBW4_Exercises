@@ -1,0 +1,6 @@
+black text on white background:
+Use alpha values for grey text, icons, and dividers
+
+To convey a hierarchy of information, you can use different shades for text. The standard alpha value for text on a white background is 87% (#000000). Secondary text, which is lower in the visual hierarchy, should have an alpha value of 54% (#000000). Text hints for users, like those in text fields and labels, have an even lower visual prominence and should have an alpha value of 26% (#000000).
+
+Other elements, such as icons and dividers, also benefit from having an alpha value of black instead of a solid color, to make sure that they work on backgrounds of any color.

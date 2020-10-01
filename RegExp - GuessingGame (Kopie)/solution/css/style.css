@@ -1,0 +1,12 @@
+.main {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.letter-container{
+    margin: 20px;
+}
+
+.letter {
+    display: inline-block;
+}

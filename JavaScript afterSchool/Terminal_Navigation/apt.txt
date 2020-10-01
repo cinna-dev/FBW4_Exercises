@@ -1,0 +1,68 @@
+APT(Advanced Package Tool) is a command line tool that is used for easy interaction with the dpkg packaging system and it is the most efficient and preferred way of managing software from the command line for Debian and Debian based Linux distributions like Ubuntu .
+
+Update:
+
+Apt-get performs installations, package searches, updates and many other operations to packages available to your system. 
+Apt-get requires administrative(super-user) privileges
+
+sudo apt-get update
+
+
+Hit: This signifies that there is no package change since the last check. Simply put, it means that there is no newer version of the package.
+Get: This means there is a package update(new version) available and it will download the details for this update, but not the update itself.
+Ign: This means that the package has been ignored. This happens either because of an error or because the package is recent and there is no need to check it for updates.
+
+Upgrade:
+
+Once your package database has been updated, you can now upgrade the packages with updates installed on you machine. This will update any applications, and the Ubuntu core system to the latest versions available.
+
+sudo apt-get upgrade
+
+
+To upgrade only a specific program rather the the whole system, use the command below:
+
+sudo apt-get upgrade [package_name]
+
+
+You can also perform an upgrade with the following command:
+
+sudo apt-get dist-upgrade
+
+
+This also performs the function of apt-get upgrade command with some slight differences. The apt-get dist-upgrade command intelligently handles changing dependencies with new versions of packages and will attempt to upgrade the most important packages at the expense of less important ones if necessary. Thus unlike apt-get upgrade , the apt-get dist-upgrade command may actually remove some packages in necessary instances.
+
+You can actually combine commands in ubuntu, such that one command can run multiple functions. To carry out an update followed by an upgrade, you can run this command:
+
+sudo apt-get update -y && sudo apt-get upgrade -y
+
+
+Install:
+
+If you are familiar with the name of the package you want to install, you can install it by running this command:
+
+sudo apt-get install [package_name]
+
+
+suppose i want to install VLC player, i’ll just run the command below:
+
+sudo apt-get install vlc
+
+
+Uninstall:
+
+To uninstall a package from your system, you can use the following command:
+
+sudo apt-get remove [package_name]
+
+
+This command removes the package but keeps the configuration files. So in case you reinstall the same package, your configuration remains the same. If you want to remove both the package and its associated configuration files, you can run this command:
+
+sudo apt-get purge [package_name]
+
+
+You can also use:
+
+sudo apt-get autoremove
+
+
+This command automatically removes any packages that aren’t used or associated with any installed program. It’s a great way to clean up any unused libraries and packages you don’t need.
